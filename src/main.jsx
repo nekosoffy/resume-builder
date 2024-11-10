@@ -6,6 +6,8 @@ import './styles/reset.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Name></Name>
+    <main>
+      <Name></Name>
+    </main>
   </StrictMode>
 );
