@@ -17,7 +17,7 @@ export default function Section({
           </form>
           <button
             type="submit"
-            form="name-form"
+            form={sectionName + '-form'}
             className="done-btn"
           >
             Done
