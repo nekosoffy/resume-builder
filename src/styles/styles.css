@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'poppinsregular';
-  src: url('poppins-regular-webfont.woff2') format('woff2');
+  src: url('../fonts/poppins-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,6 +23,12 @@ body {
   margin: 0 auto;
   padding: 20px;
   font-family: 'poppinsregular', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .section {
