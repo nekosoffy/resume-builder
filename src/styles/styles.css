@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'poppinsregular';
-  src: url('../fonts/poppins-regular.woff2') format('woff2');
+  src: url('../assets/poppins-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -64,6 +64,10 @@ ul {
   gap: 10px;
 }
 
+#info-form ul {
+  flex-direction: column;
+}
+
 .input-wrapper {
   display: flex;
   flex-direction: column;
@@ -81,7 +85,6 @@ label,
   color: white;
   padding: 3px 5px;
   font-weight: bold;
-  font-size: 1.8rem;
   transform: skew(-10deg) translateX(3px);
 }
 
@@ -89,6 +92,11 @@ label,
   background-color: rgb(15, 15, 15);
   margin-bottom: 10px;
   width: 100%;
+  font-size: 1.8rem;
+}
+
+label {
+  font-size: 1.7rem;
 }
 
 fieldset {
@@ -106,6 +114,7 @@ input {
   border: none;
   background-color: rgb(218, 222, 243);
   border-radius: 5px;
+  color: rgb(30, 30, 30);
 }
 
 .done-btn {
@@ -130,4 +139,17 @@ input {
 
 .done-btn:hover {
   background-color: rgb(32, 32, 32);
+}
+
+.info > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.info:not(.edit) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
