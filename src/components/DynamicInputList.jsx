@@ -23,7 +23,7 @@ export default function InputList({
                 type="button"
                 onClick={() => removeList(index)}
               >
-                Remove experience
+                Remove
               </button>
             </div>
             <ul>
