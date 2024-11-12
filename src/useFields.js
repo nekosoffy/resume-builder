@@ -45,7 +45,6 @@ export default function useFields(fields) {
   return {
     edit,
     data,
-    handleFieldChange,
     handleClick,
     fields: mappedFields,
   };
