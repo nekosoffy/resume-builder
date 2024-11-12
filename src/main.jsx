@@ -5,6 +5,7 @@ import PersonalInfo from './components/PersonalInfo';
 import Experience from './components/Experience';
 import './styles/styles.css';
 import './styles/reset.css';
+import Education from './components/Education';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -12,6 +13,7 @@ createRoot(document.getElementById('root')).render(
       <Name />
       <PersonalInfo />
       <Experience />
+      <Education />
     </main>
   </StrictMode>
 );

@@ -47,4 +47,22 @@ const experience = [
   },
 ];
 
-export { names, info, experience };
+const education = [
+  {
+    id: 'school',
+    label: 'School',
+    placeholder: 'e.g. Harvard',
+  },
+  {
+    id: 'certification',
+    label: 'Certification',
+    placeholder: 'e.g. Computer Science',
+  },
+  {
+    id: 'period',
+    label: 'Period',
+    placeholder: 'e.g. Jan 2024 - Present',
+  },
+];
+
+export { names, info, experience, education };

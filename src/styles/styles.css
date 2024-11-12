@@ -216,17 +216,20 @@ button:active {
   gap: 20px;
 }
 
-.experience {
+.experience,
+.education {
   display: flex;
   flex-direction: column;
 }
 
-.experience:not(.edit) h2 {
+.experience:not(.edit) h2,
+.education:not(.edit) h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.experience:not(.edit) > div {
+.experience:not(.edit) > div,
+.education:not(.edit) > div {
   text-align: left;
   width: 100%;
   margin-bottom: 20px;
@@ -235,25 +238,30 @@ button:active {
   gap: 5px;
 }
 
-.experience:not(.edit) > div:last-child {
+.experience:not(.edit) > div:last-child,
+.education:not(.edit) > div:last-child {
   margin-bottom: 0;
 }
 
-.experience:not(.edit) ul {
+.experience:not(.edit) ul,
+.education:not(.edit) ul {
   display: block;
 }
 
-.company {
+.company,
+.school {
   font-size: 1.8rem;
   font-weight: bold;
 }
 
-.position-wrapper {
+.position-wrapper,
+.certification-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.position {
+.position,
+.certification {
   text-transform: uppercase;
 }
 
@@ -262,7 +270,8 @@ button:active {
   color: rgb(40, 40, 40);
 }
 
-#experience-form ul {
+#experience-form ul,
+#education-form ul {
   flex-direction: column;
 }
 
@@ -300,13 +309,15 @@ button:active {
   border: 2px solid black;
 }
 
-#experience-form {
+#experience-form,
+#education-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-#experience-form .section-title {
+#experience-form .section-title,
+#education-form .section-title {
   margin-bottom: 0;
 }
 
