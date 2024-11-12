@@ -19,8 +19,6 @@ h2 {
 }
 
 body {
-  width: min(100%, max(600px, 45vw));
-  margin: 0 auto;
   padding: 20px;
   font-family: 'poppinsregular', sans-serif;
 }
@@ -29,6 +27,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin: 0 auto;
+  max-width: 210mm;
+  min-height: 295mm;
 }
 
 .section {
@@ -42,7 +43,7 @@ main {
 }
 
 .section:hover:not(.edit),
-.section:focus:not(.edit) {
+.section:focus-visible:not(.edit) {
   background-color: rgb(218, 222, 243);
   outline: none;
 }
@@ -78,14 +79,24 @@ ul {
 }
 
 label,
-.section-title {
+.section-title,
+legend {
   border-radius: 5px;
   text-align: left;
-  background-color: rgb(99, 68, 139);
   color: white;
   padding: 3px 5px;
   font-weight: bold;
   transform: skew(-10deg) translateX(3px);
+}
+
+legend {
+  background-color: rgb(48, 47, 47);
+  width: fit-content;
+}
+
+label,
+.section-title {
+  background-color: rgb(99, 68, 139);
 }
 
 .section-title {
@@ -102,11 +113,33 @@ label {
 fieldset {
   border: none;
   padding: 0;
+  width: 100%;
+}
+
+.fieldset-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.fieldset-wrapper {
+  margin-bottom: 10px;
+}
+
+fieldset > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  align-items: center;
 }
 
 label > div,
-.section-title > div {
+.section-title > h2,
+legend > h3 {
   transform: skew(10deg) translateX(3px);
+}
+
+legend > h3 {
+  padding-right: 8px;
+  font-size: 1.8rem;
 }
 
 input {
@@ -117,28 +150,57 @@ input {
   color: rgb(30, 30, 30);
 }
 
-.done-btn {
+button:not(.section) {
   width: fit-content;
-  align-self: flex-end;
-  font-size: 1.6rem;
+  height: fit-content;
   cursor: pointer;
-  font-weight: bold;
-  border: 2px solid rgb(0, 0, 0, 0);
   border-radius: 5px;
-  background-color: rgb(44, 44, 44);
-  box-shadow: 3px 3px 4px rgb(105, 105, 105);
-  padding: 10px 20px 8px;
   transition: 0.3s background-color ease;
   color: white;
+  border: 2px solid rgb(0, 0, 0, 0);
 }
 
-.done-btn:focus {
+button:not(.section):focus-visible {
   outline: none;
   border: 2px solid rgb(0, 0, 0);
 }
 
+button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+.done-btn,
+.new-item-btn {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 10px 20px 8px;
+  align-self: flex-end;
+  box-shadow: 3px 3px 4px rgb(105, 105, 105);
+}
+
+.done-btn {
+  background-color: rgb(44, 44, 44);
+}
+
+.new-item-btn,
+.new-point-btn {
+  background-color: rgb(59, 99, 151);
+}
+
 .done-btn:hover {
   background-color: rgb(32, 32, 32);
+}
+
+.new-item-btn:hover,
+.new-point-btn:hover {
+  background-color: rgb(42, 73, 114);
+}
+
+.btn-wrapper {
+  display: flex;
+  gap: 10px;
+  align-self: flex-end;
 }
 
 .info > div {
@@ -152,4 +214,122 @@ input {
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience:not(.edit) h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.experience:not(.edit) > div {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.experience:not(.edit) > div:last-child {
+  margin-bottom: 0;
+}
+
+.experience:not(.edit) ul {
+  display: block;
+}
+
+.company {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.position-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.position {
+  text-transform: uppercase;
+}
+
+.period {
+  font-style: italic;
+  color: rgb(40, 40, 40);
+}
+
+#experience-form ul {
+  flex-direction: column;
+}
+
+.fields-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.points-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.points-wrapper > li:last-child {
+  margin-bottom: 10px;
+}
+
+.remove-btn,
+.new-point-btn {
+  padding: 3px 5px;
+  font-size: 1.4rem;
+  box-shadow: 2px 2px 3px rgb(105, 105, 105);
+}
+
+.remove-btn {
+  background-color: rgb(182, 43, 43);
+}
+
+.remove-btn:hover {
+  background-color: rgb(143, 31, 31);
+}
+
+.remove:focus-visible {
+  border: 2px solid black;
+}
+
+#experience-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#experience-form .section-title {
+  margin-bottom: 0;
+}
+
+.point-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.points-wrapper .input-wrapper {
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.remove-point-btn {
+  background-color: rgb(50, 50, 50);
+  box-shadow: 2px 2px 3px rgb(105, 105, 105);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.remove-point-btn:hover {
+  background-color: rgb(20, 20, 20);
 }
