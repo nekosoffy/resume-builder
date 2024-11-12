@@ -13,12 +13,12 @@ export default function Name() {
     <Section
       sectionName="info"
       formStructure={
-        <fieldset>
-          <legend className="section-title">
-            <div>Personal Info Section</div>
-          </legend>
+        <>
+          <div className="section-title">
+            <h2>Personal Info Section</h2>
+          </div>
           <InputList fields={fields} />
-        </fieldset>
+        </>
       }
       displayStructure={
         <>

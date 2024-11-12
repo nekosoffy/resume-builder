@@ -12,7 +12,7 @@ export default function Name() {
       formStructure={
         <fieldset>
           <legend className="section-title">
-            <div>Name Section</div>
+            <h2>Name Section</h2>
           </legend>
           <InputList fields={fields} />
         </fieldset>
