@@ -4,6 +4,8 @@ export default function Section({
   displayStructure,
   onSubmit,
   edit,
+  newItem = false,
+  addNewItem,
 }) {
   return (
     <>
@@ -15,13 +17,31 @@ export default function Section({
           >
             {formStructure}
           </form>
-          <button
-            type="submit"
-            form={sectionName + '-form'}
-            className="done-btn"
-          >
-            Done
-          </button>
+          {newItem ? (
+            <div className="btn-wrapper">
+              <button
+                className="new-item-btn"
+                onClick={addNewItem}
+              >
+                {'Add ' + sectionName}
+              </button>
+              <button
+                type="submit"
+                form={sectionName + '-form'}
+                className="done-btn"
+              >
+                Done
+              </button>
+            </div>
+          ) : (
+            <button
+              type="submit"
+              form={sectionName + '-form'}
+              className="done-btn"
+            >
+              Done
+            </button>
+          )}
         </section>
       ) : (
         <section>

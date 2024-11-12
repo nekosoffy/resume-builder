@@ -29,4 +29,22 @@ const info = [
   },
 ];
 
-export { names, info };
+const experience = [
+  {
+    id: 'company',
+    label: 'Company',
+    placeholder: 'e.g. Amazon',
+  },
+  {
+    id: 'position',
+    label: 'Position',
+    placeholder: 'e.g. Software Developer',
+  },
+  {
+    id: 'period',
+    label: 'Period',
+    placeholder: 'e.g. Jan 2024 - Present',
+  },
+];
+
+export { names, info, experience };
